@@ -71,12 +71,16 @@ while(! feof($file))
 fclose($file);
 //echo $line;
 
-$pieces = explode("+",$line);
+// Load configuration as an array. Use the actual location of your configuration file
+$config = parse_ini_file('config.ini');
+
+
+/*$pieces = explode("+",$line);
 $servername = "localhost";
 $username = trim( $pieces[0]);
 $password = trim($pieces[1]);
-$dbname = trim($pieces[2]);
-$conn = new mysqli($servername, $username, $password, $dbname);
+$dbname = trim($pieces[2]);*/
+$conn = new mysqli('127.0.0.1:3306',$config['username'],$config['password'],$config['dbname']);
 
 // Check connection
 if ($conn->connect_error) {
