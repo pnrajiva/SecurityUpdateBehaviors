@@ -44,7 +44,7 @@ session_start();
 $_SESSION["workerId"] = $_GET["MTId"];
 
 //Set the Name of the page to go next
-$result = "GI2.php";
+$result = "Instructions.php";
 
 // Load Experiment configuration as an array.
 $Exp_config = parse_ini_file('ExperimentConfiguration.ini');
@@ -59,7 +59,7 @@ $_SESSION["Condition"]=$Exp_config['Condition'];
 //    $_SESSION["Condition"]=1;
 //}
 //else {
-//    $result = "GI2.php";
+//    $result = "Instructions.php";
 //    $_SESSION["Condition"]=2;
 //}
 
