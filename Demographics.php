@@ -40,47 +40,54 @@
 
 <?php
 session_start();
+//Set the MTurk ID
 $_SESSION["workerId"] = $_GET["MTId"];
 
-//$rand = mt_rand(1,10000)/10000;
+//Set the Name of the page to go next
 $result = "GI2.php";
+
+// Load Experiment configuration as an array.
+$Exp_config = parse_ini_file('ExperimentConfiguration.ini');
+$_SESSION["Condition"]=$Exp_config['Condition'];
+
+//$rand = mt_rand(1,10000)/10000;
 //Based on the random number, choose the next step
 //$rand = 0.4; //changed it from 0.6 to 0.4 for running fixed condition
-$rand = 0.6; //changed it from 0.6 to 0.4 for running fixed condition
-if($rand<0.51) {
-    $result = "GI2_Fixed.php";
-    $_SESSION["Condition"]=1;
-}
-else {
-    $result = "GI2.php";
-    $_SESSION["Condition"]=2;
-}
+//$rand = 0.6; //changed it from 0.6 to 0.4 for running fixed condition
+//if($rand<0.51) {
+//    $result = "GI2_Fixed.php";
+//    $_SESSION["Condition"]=1;
+//}
+//else {
+//    $result = "GI2.php";
+//    $_SESSION["Condition"]=2;
+//}
 
-$line = "";
-$file = fopen("Config.txt","r");
-$temp = 0;
-while(! feof($file))
-{
-    if($temp==0){
-        $line = fgets($file);
-
-    }
-    $line = $line."+".fgets($file);
-    $temp = $temp + 1;
-}
-fclose($file);
+//$line = "";
+//$file = fopen("Config.txt","r");
+//$temp = 0;
+//while(! feof($file))
+//{
+//    if($temp==0){
+//        $line = fgets($file);
+//
+//    }
+//    $line = $line."+".fgets($file);
+//    $temp = $temp + 1;
+//}
+//fclose($file);
 //echo $line;
-
-// Load configuration as an array. Use the actual location of your configuration file
-$config = parse_ini_file('../Config.ini');
-
-
 /*$pieces = explode("+",$line);
 $servername = "localhost";
 $username = trim( $pieces[0]);
 $password = trim($pieces[1]);
 $dbname = trim($pieces[2]);*/
-$conn = new mysqli('127.0.0.1:3306',$config['username'],$config['password'],$config['dbname']);
+
+// Load configuration as an array. Use the actual location of your configuration file
+$config = parse_ini_file('../Config.ini');
+
+// Create a new connection with the DB server details from config.ini
+$conn = new mysqli($config['server'],$config['username'],$config['password'],$config['dbname']);
 
 // Check connection
 if ($conn->connect_error) {
@@ -93,6 +100,7 @@ if ($result1->num_rows > 0) {
 }
 $conn->close();
 ?>
+
 <label id="catnum12" style="font-size:x-large; color:black; font-style:italic;" ></label>
 <div id="start">
 <form name="myForm" method="get" onsubmit="return validate();" action=<?php echo $result;?>>

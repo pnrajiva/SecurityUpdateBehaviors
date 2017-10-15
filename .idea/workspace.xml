@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44c2bddd-6fa4-4531-9ed8-096715b238c2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demographics.php" afterPath="$PROJECT_DIR$/Demographics.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GI2.php" afterPath="$PROJECT_DIR$/GI2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Save_parallel.php" afterPath="$PROJECT_DIR$/Save_parallel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StartTask.php" afterPath="$PROJECT_DIR$/StartTask.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Task_parallel.php" afterPath="$PROJECT_DIR$/Task_parallel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThankYou.php" afterPath="$PROJECT_DIR$/ThankYou.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,24 +20,94 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Demographics.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Demographics.php">
+      <file leaf-file-name="ResearchStudy.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ResearchStudy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="78" column="26" lean-forward="true" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+            <state relative-caret-position="2295">
+              <caret line="157" column="13" lean-forward="true" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
               <folding>
-                <marker date="1508078100000" expanded="true" signature="2319:2397" ph="SELECT UserI... UpdateDemographics" />
+                <element signature="e#2223#2228#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResearchStudy.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ResearchStudy.php">
+      <file leaf-file-name="Demographics.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demographics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="481">
+              <caret line="89" column="96" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="96" />
+              <folding>
+                <element signature="n#script#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <marker date="1508097601000" expanded="true" signature="2648:2726" ph="SELECT UserI... UpdateDemographics" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GI2.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GI2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding>
+                <marker date="1508097010000" expanded="true" signature="1401:1599" ph="INSERT INTO UpdateDemographics... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartTask.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StartTask.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task_parallel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Task_parallel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4814">
+              <caret line="371" column="17" lean-forward="true" selection-start-line="371" selection-start-column="17" selection-end-line="371" selection-end-column="17" />
+              <folding>
+                <marker date="1508100544000" expanded="false" signature="7737:7756" ph="..." />
+                <marker date="1508100544000" expanded="false" signature="7885:7904" ph="..." />
+                <marker date="1508100544000" expanded="false" signature="8889:8902" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThankYou.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ThankYou.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-349">
+              <caret line="75" column="7" lean-forward="true" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
+              <folding>
+                <marker date="1508101236000" expanded="true" signature="2646:2701" ph="SELECT COUNT... UpdateDecisions" />
+                <marker date="1508101236000" expanded="true" signature="2825:2953" ph="UPDATE Updat... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Save_parallel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Save_parallel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="96" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="11" selection-end-column="96" />
+              <folding>
+                <marker date="1508100317000" expanded="true" signature="1735:1819" ph="SELECT CurEn... UpdateDecisions" />
+                <marker date="1508100317000" expanded="true" signature="2467:2558" ph="SELECT COUNT... UpdateDecisions" />
+                <marker date="1508100317000" expanded="true" signature="2881:3140" ph="INSERT INTO UpdateDecisions... " />
+                <marker date="1508100317000" expanded="true" signature="3346:3605" ph="INSERT INTO DecisionSummary... " />
+                <marker date="1508100317000" expanded="true" signature="3894:4153" ph="INSERT INTO DecisionSummary... " />
+                <marker date="1508100317000" expanded="true" signature="4692:4951" ph="INSERT INTO DecisionSummary... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,7 +120,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/GI2.php" />
         <option value="$PROJECT_DIR$/Demographics.php" />
+        <option value="$PROJECT_DIR$/StartTask.php" />
+        <option value="$PROJECT_DIR$/Save_parallel.php" />
+        <option value="$PROJECT_DIR$/Task_parallel.php" />
+        <option value="$PROJECT_DIR$/ThankYou.php" />
       </list>
     </option>
   </component>
@@ -94,7 +175,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -110,7 +191,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Script.ResearchStudy.php">
+    <configuration default="false" name="ResearchStudy.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/ResearchStudy.php">
+      <method />
+    </configuration>
     <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
       <PhpTestRunnerSettings />
       <method />
@@ -178,6 +262,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.ResearchStudy.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.ResearchStudy.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -192,23 +284,24 @@
       <workItem from="1507928000165" duration="556000" />
       <workItem from="1507928681161" duration="557000" />
       <workItem from="1507930573701" duration="49000" />
-      <workItem from="1508078002287" duration="123000" />
+      <workItem from="1508078002287" duration="6550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1285000" />
+    <option name="totallyTimeSpent" value="7712000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="716" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -238,7 +331,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#2223#2228#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -254,7 +349,9 @@
         <state relative-caret-position="1080">
           <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <marker date="1508078100000" expanded="true" signature="2319:2397" ph="SELECT UserI... UpdateDemographics" />
+            <element signature="n#script#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1508097601000" expanded="true" signature="2648:2726" ph="SELECT UserI... UpdateDemographics" />
           </folding>
         </state>
       </provider>
@@ -266,20 +363,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Period3Ins.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GI1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-993">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1487693410000" expanded="true" signature="1403:1601" ph="INSERT INTO UpdateDemographics... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GI2_Fixed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-818">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495026273000" expanded="true" signature="1222:1420" ph="INSERT INTO UpdateDemographics... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExperimentConfiguration.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ResearchStudy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="2295">
+          <caret line="157" column="13" lean-forward="true" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
+          <folding>
+            <element signature="e#2223#2228#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GI2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <marker date="1508097010000" expanded="true" signature="1401:1599" ph="INSERT INTO UpdateDemographics... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demographics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="78" column="26" lean-forward="true" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+        <state relative-caret-position="481">
+          <caret line="89" column="96" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="96" />
           <folding>
-            <marker date="1508078100000" expanded="true" signature="2319:2397" ph="SELECT UserI... UpdateDemographics" />
+            <element signature="n#script#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1508097601000" expanded="true" signature="2648:2726" ph="SELECT UserI... UpdateDemographics" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_parallel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4814">
+          <caret line="371" column="17" lean-forward="true" selection-start-line="371" selection-start-column="17" selection-end-line="371" selection-end-column="17" />
+          <folding>
+            <marker date="1508100544000" expanded="false" signature="7737:7756" ph="..." />
+            <marker date="1508100544000" expanded="false" signature="7885:7904" ph="..." />
+            <marker date="1508100544000" expanded="false" signature="8889:8902" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StartTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Save_parallel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="96" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="11" selection-end-column="96" />
+          <folding>
+            <marker date="1508100317000" expanded="true" signature="1735:1819" ph="SELECT CurEn... UpdateDecisions" />
+            <marker date="1508100317000" expanded="true" signature="2467:2558" ph="SELECT COUNT... UpdateDecisions" />
+            <marker date="1508100317000" expanded="true" signature="2881:3140" ph="INSERT INTO UpdateDecisions... " />
+            <marker date="1508100317000" expanded="true" signature="3346:3605" ph="INSERT INTO DecisionSummary... " />
+            <marker date="1508100317000" expanded="true" signature="3894:4153" ph="INSERT INTO DecisionSummary... " />
+            <marker date="1508100317000" expanded="true" signature="4692:4951" ph="INSERT INTO DecisionSummary... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThankYou.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-349">
+          <caret line="75" column="7" lean-forward="true" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
+          <folding>
+            <marker date="1508101236000" expanded="true" signature="2646:2701" ph="SELECT COUNT... UpdateDecisions" />
+            <marker date="1508101236000" expanded="true" signature="2825:2953" ph="UPDATE Updat... " />
           </folding>
         </state>
       </provider>

@@ -1,27 +1,36 @@
 <?php
 session_start();
+// Load Experiment configuration as an array.
+$Exp_config = parse_ini_file('ExperimentConfiguration.ini');
+
 
 //Establish a database connection
-$line = "";
-$file = fopen("Config.txt","r");
-$temp = 0;
-while(! feof($file))
-{
-    if($temp==0){
-        $line = fgets($file);
+// Load configuration as an array. Use the actual location of your configuration file
+$config = parse_ini_file('../Config.ini');
 
-    }
-    $line = $line."+".fgets($file);
-    $temp = $temp + 1;
-}
-fclose($file);
+// Create a new connection with the DB server details from config.ini
+$conn = new mysqli($config['server'],$config['username'],$config['password'],$config['dbname']);
 
-$pieces = explode("+",$line);
-$servername = "localhost";
-$username = trim( $pieces[0]);
-$password = trim($pieces[1]);
-$dbname = trim($pieces[2]);
-$conn = new mysqli($servername, $username, $password, $dbname);
+//$line = "";
+//$file = fopen("Config.txt","r");
+//$temp = 0;
+//while(! feof($file))
+//{
+//    if($temp==0){
+//        $line = fgets($file);
+//
+//    }
+//    $line = $line."+".fgets($file);
+//    $temp = $temp + 1;
+//}
+//fclose($file);
+//
+//$pieces = explode("+",$line);
+//$servername = "localhost";
+//$username = trim( $pieces[0]);
+//$password = trim($pieces[1]);
+//$dbname = trim($pieces[2]);
+//$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
@@ -49,7 +58,7 @@ $prevday = $Day - 1;
 $_SESSION["DayPayoff"]=$Gamble;
 //get the current endowment value
 if(($period==1) && ($Day==1)){ //if period 1 and day 1 set the endowment to 1000
-    $endowment = 100;
+    $endowment = $Exp_config['Endowment'];
 }
 else{ //if > Day 1, get the endowment from previous trial
     $sql = "SELECT CurEndowment FROM UpdateDecisions WHERE UserID='$ID' ORDER BY ID DESC LIMIT 1";
@@ -70,7 +79,7 @@ if($Decision==1)
 }
 
 $lossfromattack = 0;
-if($AttackLoss == 100){
+if($AttackLoss == $Exp_config['Loss']){
     $lossfromattack = $AttackLoss;
 }
 

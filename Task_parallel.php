@@ -46,8 +46,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }*/
-
-
+// Load Experiment configuration as an array.
+$Exp_config = parse_ini_file('ExperimentConfiguration.ini');
 //Get the UserID
 $ID = $_SESSION["workerId"];
 //Get the Condition value
@@ -61,35 +61,29 @@ $day = $_SESSION["day"];
 if($day==10){
     //increment the period number
     $period +=1;
+    //Reset the rest of the variables - to start a new period
     $_SESSION["period"] = $period;
     $day = 0;
     $_SESSION["outcome"]=0;
     $_SESSION["outcomeday"] = 0;
-    $_SESSION["payoff"] = 0;
+    $_SESSION["payoff"] = $Exp_config['InitialPayoff'];
 }
-//Close the database connection
-//$conn->close();
 
 //increment the day number
 $day +=1;
 $_SESSION["day"] = $day;
-
-
 $nextday = $_SESSION["outcomeday"] + 1;
 
 //get the cost of update for that day
+$UpdateCost = $Exp_config['HighUpdateCost']; //Default is the high update cost
 
-$UpdateCost = 9.5; //Default cost for fixed condition
-
-if($Condition==2){//The cost for Variable condition
-$UpdateCost = 10;
-if($day!=1){
+if($day!=1){ // For days greater than 1, there is a chance for lower cost
     $rand1 = mt_rand(1,10000)/10000;
-    if($rand1<0.15){
-        $UpdateCost = 0;
+    if($rand1<$Exp_config['PDiscount']){  //there is a probability of low update cost based on Pdiscount - which varies by condition
+        $UpdateCost = $Exp_config['LowUpdateCost']; //set low update cost
     }
 }
-}
+
 
 //on the second period - determine the day of attack
 /*if($day==1 && $period==2){
@@ -108,33 +102,39 @@ if($day!=1){
 
 ///////////////////////////Calculate the probability of being attacked
 $Attacked = 0; //default is 0
-//not attacked during period 1
-//for period 2
-if($period==2){ //in period 2 we randomly choose a day to be attacked
-    if($day==1){ //cannot be attacked on Day 1
-        $cost = array(0,0,0,0,1,0,0,0,0);
-        shuffle($cost); //shuffle the list to make the decision later
-        $_SESSION["costlist"] = implode(",",$cost);
-    }
-    else{
-        $costlist = $_SESSION["costlist"];
-        $costarray = explode(",",$costlist);
-        $index = $day-2;
-        $Attacked = $costarray[$index];
-    }
-}
 
-//not attacked during period 3 remove the list from session
-if($period == 3){
-    unset($_SESSION["costlist"]);
-}
+################ Commented the below to keep all periods identical ############
+
+////not attacked during period 1
+////for period 2
+//if($period==2){ //in period 2 we randomly choose a day to be attacked
+//    if($day==1){ //cannot be attacked on Day 1
+//        $cost = array(0,0,0,0,1,0,0,0,0);
+//        shuffle($cost); //shuffle the list to make the decision later
+//        $_SESSION["costlist"] = implode(",",$cost);
+//    }
+//    else{
+//        $costlist = $_SESSION["costlist"];
+//        $costarray = explode(",",$costlist);
+//        $index = $day-2;
+//        $Attacked = $costarray[$index];
+//    }
+//}
+//
+////not attacked during period 3 remove the list from session
+//if($period == 3){
+//    unset($_SESSION["costlist"]);
+//}
 
 //for periods above 3
-if($period>3){
-    $rand = mt_rand(1,10000)/10000;//get a random value between 0 and 1
-    if($day>1){ //cannot be attacked on Day 1
-        if($_SESSION['outcome']==1){ //if updated, probability on 1% of being attacked
-            if($rand<=0.99){
+//if($period>3){
+    ###### Above parts are commented to keep all periods identical #################
+
+$rand = mt_rand(1,10000)/10000;//get a random value between 0 and 1
+
+if($day>1){ //cannot be attacked on Day 1
+        if($_SESSION['outcome']==1){ //if updated, some probability of being attacked - based on experiment variables
+            if($rand<=(1-$Exp_config['PAttackProtection'])){
                 $Attacked = 0;
             }
             else{
@@ -142,20 +142,20 @@ if($period>3){
             }
         }
         else{
-            if($rand<=0.97){    //if not updated, probability on 3% of being attacked (irrespective of whether attacked earlier)
+            if($rand<=(1-$Exp_config['PAttack'])){    //if not updated, probability of being attacked (irrespective of whether attacked earlier)
                 $Attacked = 0;
             }
             else{
                 $Attacked = 1;
             }
         }
-    }
 }
+//}
 ///////////////////
 
 $rand1 = mt_rand(1,10000)/10000;
 $onupdate = $_SESSION["payoff"]-$UpdateCost;
-$onattack = $_SESSION["payoff"]-100;
+$onattack = $_SESSION["payoff"]-$Exp_config['Loss'];
 ?>
 
 <script type="text/javascript">
@@ -270,60 +270,38 @@ $onattack = $_SESSION["payoff"]-100;
 </script>
 
 <body>
-<?php if($period==4 && $day==1){ ?>
-    <div id="ins">
-        <br/><br/><br/><br/>
-        <div id="wrapperC" style="font-size: x-large;">Good news: Software updates will be made available now!!</div>
-        <div id="wrapperC">
-            <p style="font-size: x-large;">
-                <?php if($Condition==1){ //Fixed cost?>
-                    <b>Remember:</b> The cost of an update is 9.5 points. <br/>
-                    If you choose to update, your chance of confronting a security failure reduces from 3% to 1%.
-                <?php } ?>
-
-                <?php if($Condition==2){ //Variable Cost?>
-                <b>Remember:</b> The cost of an update is most often 10 points (85% of the time); but sometimes (15% of the time), an update may be available for free (0 points). <br/>
-                If you choose to update, your chance of confronting a security failure reduces from 3% to 1%.
-                <?php } ?>
-
-            </p>
-        </div>
-        <br/>
-        <button id="ButtonIns" class="btn-style" onclick="ins_click();return false;">Proceed</button>
-        <br/>
-    </div>
-<div id="main" style="display: none">
-<?php }else{ ?>
-
-    <div id="main">
-<?php } ?>
+<?php //if($period==4 && $day==1){ ?>
+<!--    <div id="ins">-->
+<!--        <br/><br/><br/><br/>-->
+<!--        <div id="wrapperC" style="font-size: x-large;">Good news: Software updates will be made available now!!</div>-->
+<!--        <div id="wrapperC">-->
+<!--            <p style="font-size: x-large;">-->
+<!--                --><?php //if($Condition==1){ //Fixed cost?>
+<!--                    <b>Remember:</b> The cost of an update is 9.5 points. <br/>-->
+<!--                    If you choose to update, your chance of confronting a security failure reduces from 3% to 1%.-->
+<!--                --><?php //} ?>
+<!---->
+<!--                --><?php //if($Condition==2){ //Variable Cost?>
+<!--                <b>Remember:</b> The cost of an update is most often 10 points (85% of the time); but sometimes (15% of the time), an update may be available for free (0 points). <br/>-->
+<!--                If you choose to update, your chance of confronting a security failure reduces from 3% to 1%.-->
+<!--                --><?php //} ?>
+<!---->
+<!--            </p>-->
+<!--        </div>-->
+<!--        <br/>-->
+<!--        <button id="ButtonIns" class="btn-style" onclick="ins_click();return false;">Proceed</button>-->
+<!--        <br/>-->
+<!--    </div>-->
+<!--<div id="main" style="display: none">-->
+<?php //}else{ ?>
+<?php //} ?>
 
 
+<div id="main">
 <div id="wrapperC">
     <h1>PERIOD <?php echo $period; ?></h1>
 </div>
-
-    <!--<div id="wrapperL">
-        <span style="font-size: large;">Current security status: <b>
-                <?php /*if ($Attacked) { */?>
-                     <span style="font-size: large; font-weight: bold; color: red; ">You incurred losses from a security event</span>
-                <?php /*} elseif ($_SESSION["outcome"]==1 && $day==$nextday) { */?>
-                    <span style="font-size: large; font-weight: bold; color: darkgreen; ">You updated. You are now less likely to face a security event. </span>
-                <?php /* } elseif($_SESSION["outcome"]==2){
-                    echo "You had a security event on day ".$_SESSION["outcomeday"]." in this period";
-                }
-                else {
-                    echo "No losses so far in this period";
-                } */?>
-            </b></span><br>
-    </div>
-
-    <br/><br/>-->
-        <br/>
-<!--        <div id="wrapperR">-->
-<!---->
-<!--        </div>-->
-
+    <br/>
     <div id="wrapperC">
         <?php if($Attacked){ ?>
             <span id="accpayoff" style="font-size: 16pt;">POINTS you accumulated in this period: <b><?php echo $onattack; ?> points</b></span>
@@ -358,8 +336,6 @@ $onattack = $_SESSION["payoff"]-100;
 
 
         </div>
-        <!-- <span style="font-size: large;">Day: <b><?php //echo $day; ?></b></span> <br/> -->
-
     </div>
 
 <form name="myForm" method="get" action="Save_parallel.php">
@@ -369,10 +345,10 @@ $onattack = $_SESSION["payoff"]-100;
         <input type="hidden" name="Cost" value="<?php echo $UpdateCost; ?>"/>
         <input type="hidden" id="Gamble" name="Gamble" value="0"/>
         <input type="hidden" id="Decision" name="Decision" value="0"/>
-        <input type="hidden" name="Attacked" value="<?php if($Attacked){echo 100;}else{echo 0;} ?>"/>
+        <input type="hidden" name="Attacked" value="<?php if($Attacked){echo $Exp_config['Loss'];}else{echo 0;} ?>"/>
         <input type="hidden" id="randval" name="randval" value=<?php echo $rand1; ?> />
 
-        <?php if($period>3){ ?>
+<!--        --><?php //if($period>3){ ?>
             <div id="updateD" name="updateD">
                     <?php if($Attacked || $_SESSION["outcome"]>0) { ?>
                         <?php  if ($_SESSION["outcome"]>1 || $Attacked){ ?>
@@ -390,7 +366,7 @@ $onattack = $_SESSION["payoff"]-100;
                         <button id="Update" class="btn-style1" onclick="U_click(); return false;" class="btn-style1">Update</button> <br/>
                     <?php } ?>
             </div>
-        <?php } ?>
+<!--        --><?php //} ?>
 
         <div id="gambleD" name="gambleD" >
             <br/>
@@ -414,7 +390,7 @@ $onattack = $_SESSION["payoff"]-100;
       --><?php /* } } */?>
 
         <?php if ($Attacked) { ?>
-            <span id="lossFeedback" style="font-size: x-large; font-weight: bold; color: red; ">A security failure has occurred!!! You lost 100 points &#9785;</span>
+            <span id="lossFeedback" style="font-size: x-large; font-weight: bold; color: red; ">A security failure has occurred!!! You lost <?php echo $Exp_config['Loss'] ?> points &#9785;</span>
             <br/>
         <?php } ?>
     </div>

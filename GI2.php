@@ -16,39 +16,38 @@
 session_start();
 date_default_timezone_set('America/New_York');
 $my_date = date("Y-m-d H:i:s");
-/**
- * Created by PhpStorm.
- * User: prashanthrajivan
- * Date: 1/30/17
- * Time: 10:22 AM
- */
+
 //Get the UserID
 $ID = $_SESSION["workerId"];
 
 //Get the Condition value
 $Condition = $_SESSION["Condition"];
 
+//$line = "";
+//$file = fopen("Config.txt","r");
+//$temp = 0;
+//while(! feof($file))
+//{
+//    if($temp==0){
+//        $line = fgets($file);
+//
+//    }
+//    $line = $line."+".fgets($file);
+//    $temp = $temp + 1;
+//}
+//fclose($file);
+//
+//$pieces = explode("+",$line);
+//$servername = "localhost";
+//$username = trim( $pieces[0]);
+//$password = trim($pieces[1]);
+//$dbname = trim($pieces[2]);
 
-$line = "";
-$file = fopen("Config.txt","r");
-$temp = 0;
-while(! feof($file))
-{
-    if($temp==0){
-        $line = fgets($file);
+// Load configuration as an array. Use the actual location of your configuration file
+$config = parse_ini_file('../Config.ini');
 
-    }
-    $line = $line."+".fgets($file);
-    $temp = $temp + 1;
-}
-fclose($file);
-
-$pieces = explode("+",$line);
-$servername = "localhost";
-$username = trim( $pieces[0]);
-$password = trim($pieces[1]);
-$dbname = trim($pieces[2]);
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Create a new connection with the DB server details from config.ini
+$conn = new mysqli($config['server'],$config['username'],$config['password'],$config['dbname']);
 
 // Check connection
 if ($conn->connect_error) {
@@ -68,6 +67,7 @@ if ($conn->query($sql) === TRUE) {
 }
 $conn->close();
 ?>
+
 <body>
 <div id="wrapperC"><h1>Investment decisions and security failures</h1></div>
 <div id="wrapperL">
