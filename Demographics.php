@@ -72,7 +72,7 @@ fclose($file);
 //echo $line;
 
 // Load configuration as an array. Use the actual location of your configuration file
-$config = parse_ini_file('config.ini');
+$config = parse_ini_file('../Config.ini');
 
 
 /*$pieces = explode("+",$line);
