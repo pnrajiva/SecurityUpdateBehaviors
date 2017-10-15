@@ -73,6 +73,9 @@ else{ //if > Day 1, get the endowment from previous trial
     }
 }
 
+if($Day == 1){ //On first day add the initial payoff to the endowment
+    $endowment = $endowment + $Exp_config['InitialPayoff'];
+}
 
 $costofupdating = 0;
 if($Decision==1)
