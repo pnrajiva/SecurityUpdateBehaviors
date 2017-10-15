@@ -17,21 +17,46 @@
       <file leaf-file-name="Save_parallel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Save_parallel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="908">
-              <caret line="119" column="56" lean-forward="true" selection-start-line="119" selection-start-column="56" selection-end-line="119" selection-end-column="56" />
+            <state relative-caret-position="230">
+              <caret line="102" column="8" lean-forward="true" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
               <folding>
-                <marker date="1508104730000" expanded="true" signature="1737:1821" ph="SELECT CurEn... UpdateDecisions" />
-                <marker date="1508104730000" expanded="true" signature="2469:2560" ph="SELECT COUNT... UpdateDecisions" />
-                <marker date="1508104730000" expanded="true" signature="2883:3142" ph="INSERT INTO UpdateDecisions... " />
-                <marker date="1508104730000" expanded="true" signature="3348:3607" ph="INSERT INTO DecisionSummary... " />
-                <marker date="1508104730000" expanded="true" signature="3912:4171" ph="INSERT INTO DecisionSummary... " />
-                <marker date="1508104730000" expanded="true" signature="4710:4969" ph="INSERT INTO DecisionSummary... " />
+                <element signature="e#464#477#0#PHP" expanded="false" />
+                <element signature="e#946#1030#0#PHP" expanded="false" />
+                <element signature="e#1541#2040#0#PHP" expanded="false" />
+                <element signature="e#1667#2040#0#PHP" expanded="false" />
+                <element signature="e#2064#2119#0#PHP" expanded="false" />
+                <element signature="e#2142#2218#0#PHP" expanded="false" />
+                <element signature="e#2854#5136#0#PHP" expanded="false" />
+                <element signature="e#5198#20065#0#PHP" expanded="false" />
+                <element signature="e#5244#9983#0#PHP" expanded="false" />
+                <element signature="e#6783#6808#0#HTML" expanded="true" />
+                <element signature="e#7718#9947#0#HTML" expanded="false" />
+                <element signature="e#9042#9067#0#HTML" expanded="true" />
+                <element signature="e#9999#20065#0#PHP" expanded="false" />
+                <element signature="e#10076#15365#0#PHP" expanded="false" />
+                <element signature="e#11506#11531#0#HTML" expanded="true" />
+                <element signature="e#14070#14095#0#HTML" expanded="true" />
+                <element signature="e#17099#17124#0#HTML" expanded="true" />
+                <element signature="e#19184#19209#0#HTML" expanded="true" />
+                <element signature="e#19989#20065#0#PHP" expanded="false" />
+                <marker date="1508105586000" expanded="true" signature="1737:1821" ph="SELECT CurEn... UpdateDecisions" />
+                <marker date="1508105586000" expanded="true" signature="2469:2560" ph="SELECT COUNT... UpdateDecisions" />
+                <marker date="1508105586000" expanded="true" signature="2883:3142" ph="INSERT INTO UpdateDecisions... " />
+                <marker date="1508105586000" expanded="true" signature="3348:3607" ph="INSERT INTO DecisionSummary... " />
+                <marker date="1508105586000" expanded="true" signature="3912:4171" ph="INSERT INTO DecisionSummary... " />
+                <marker date="1508105586000" expanded="true" signature="4710:4969" ph="INSERT INTO DecisionSummary... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>100 points</find>
+      <find>100</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -210,12 +235,12 @@
       <workItem from="1507928000165" duration="556000" />
       <workItem from="1507928681161" duration="557000" />
       <workItem from="1507930573701" duration="49000" />
-      <workItem from="1508078002287" duration="8432000" />
+      <workItem from="1508078002287" duration="9245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9594000" />
+    <option name="totallyTimeSpent" value="10407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="714" extended-state="6" />
@@ -228,7 +253,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12116317" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -396,15 +421,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Save_parallel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="908">
-          <caret line="119" column="56" lean-forward="true" selection-start-line="119" selection-start-column="56" selection-end-line="119" selection-end-column="56" />
+        <state relative-caret-position="230">
+          <caret line="102" column="8" lean-forward="true" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
           <folding>
-            <marker date="1508104730000" expanded="true" signature="1737:1821" ph="SELECT CurEn... UpdateDecisions" />
-            <marker date="1508104730000" expanded="true" signature="2469:2560" ph="SELECT COUNT... UpdateDecisions" />
-            <marker date="1508104730000" expanded="true" signature="2883:3142" ph="INSERT INTO UpdateDecisions... " />
-            <marker date="1508104730000" expanded="true" signature="3348:3607" ph="INSERT INTO DecisionSummary... " />
-            <marker date="1508104730000" expanded="true" signature="3912:4171" ph="INSERT INTO DecisionSummary... " />
-            <marker date="1508104730000" expanded="true" signature="4710:4969" ph="INSERT INTO DecisionSummary... " />
+            <element signature="e#464#477#0#PHP" expanded="false" />
+            <element signature="e#946#1030#0#PHP" expanded="false" />
+            <element signature="e#1541#2040#0#PHP" expanded="false" />
+            <element signature="e#1667#2040#0#PHP" expanded="false" />
+            <element signature="e#2064#2119#0#PHP" expanded="false" />
+            <element signature="e#2142#2218#0#PHP" expanded="false" />
+            <element signature="e#2854#5136#0#PHP" expanded="false" />
+            <element signature="e#5198#20065#0#PHP" expanded="false" />
+            <element signature="e#5244#9983#0#PHP" expanded="false" />
+            <element signature="e#6783#6808#0#HTML" expanded="true" />
+            <element signature="e#7718#9947#0#HTML" expanded="false" />
+            <element signature="e#9042#9067#0#HTML" expanded="true" />
+            <element signature="e#9999#20065#0#PHP" expanded="false" />
+            <element signature="e#10076#15365#0#PHP" expanded="false" />
+            <element signature="e#11506#11531#0#HTML" expanded="true" />
+            <element signature="e#14070#14095#0#HTML" expanded="true" />
+            <element signature="e#17099#17124#0#HTML" expanded="true" />
+            <element signature="e#19184#19209#0#HTML" expanded="true" />
+            <element signature="e#19989#20065#0#PHP" expanded="false" />
+            <marker date="1508105586000" expanded="true" signature="1737:1821" ph="SELECT CurEn... UpdateDecisions" />
+            <marker date="1508105586000" expanded="true" signature="2469:2560" ph="SELECT COUNT... UpdateDecisions" />
+            <marker date="1508105586000" expanded="true" signature="2883:3142" ph="INSERT INTO UpdateDecisions... " />
+            <marker date="1508105586000" expanded="true" signature="3348:3607" ph="INSERT INTO DecisionSummary... " />
+            <marker date="1508105586000" expanded="true" signature="3912:4171" ph="INSERT INTO DecisionSummary... " />
+            <marker date="1508105586000" expanded="true" signature="4710:4969" ph="INSERT INTO DecisionSummary... " />
           </folding>
         </state>
       </provider>

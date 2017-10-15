@@ -170,7 +170,8 @@ if($_SESSION["outcome"]==1 && $Day==10){
                             <br/>
                             <!-- <span style="font-size: large;">Your payoff for yesterday: <b><?php echo $Gamble; ?></b></span><br> -->
                             <span style="font-size: large;">You completed period <b><?php echo $period; ?></b>.</span><br>
-                            <span style="font-size: large;">TOTAL POINTS you have up to this point: <b><?php echo $endowment; ?></b> points</span><br/>
+<!--                            <span style="font-size: large;">TOTAL POINTS you have up to this point: <b>--><?php //echo $endowment; ?><!--</b> points</span><br/>-->
+                            <span style="font-size: large;">TOTAL POINTS you accumulated in this period: <b><?php echo $_SESSION["payoff"]; ?></b> points</span><br/>
                             <span style="font-size: large;">You chose to update on <b>Day <?php echo $_SESSION["outcomeday"]; ?></b> in this period.</span><br>
                             <span style="font-size: large;">You spent <b><?php echo $_SESSION["outcomecost"]; ?></b> points to update </span><br>
                             <span style="font-size: large; color: green;">Fortunately, you did <b><u>not</u></b> confront any security failure in this period!! &#9786;</span><br/>
@@ -204,7 +205,8 @@ if($_SESSION["outcome"]==1 && $Day==10){
                             <br/>
                             <!-- <span style="font-size: large;">Your payoff for yesterday: <b><?php echo $Gamble; ?></b></span><br> -->
                             <span style="font-size: large;">You completed period <b><?php echo $period; ?></b>.</span><br>
-                            <span style="font-size: large;">TOTAL POINTS you have up to this point: <b><?php echo $endowment; ?></b> points</span><br/>
+<!--                            <span style="font-size: large;">TOTAL POINTS you have up to this point: <b>--><?php //echo $endowment; ?><!--</b> points</span><br/>-->
+                            <span style="font-size: large;">TOTAL POINTS you accumulated in this period: <b><?php echo $_SESSION["payoff"]; ?></b> points</span><br/>
                             <span style="font-size: large;">You chose to update on <b>Day <?php echo $_SESSION["outcomeday"]; ?></b> in this period.</span><br>
                             <span style="font-size: large;">You spent <b><?php echo $_SESSION["outcomecost"]; ?></b> points to update </span><br>
                             <span style="font-size: large; color: green;">Fortunately, you did <b><u>not</u></b> confront any security failure in this period!! &#9786;</span><br/>
@@ -246,14 +248,15 @@ if($_SESSION["outcome"]==1 && $Day==10){
                         <br/>
                         <!-- <span style="font-size: large;">Your payoff for yesterday: <b><?php echo $Gamble; ?></b></span><br> -->
                         <span style="font-size: large;">You completed period <b><?php echo $period; ?></b></span><br>
-                        <span style="font-size: large;">TOTAL POINTS you have up to this point: <b><?php echo $endowment; ?></b> points</span><br/>
+<!--                        <span style="font-size: large;">TOTAL POINTS you have up to this point: <b>--><?php //echo $endowment; ?><!--</b> points</span><br/>-->
+                        <span style="font-size: large;">TOTAL POINTS you accumulated in this period: <b><?php echo $_SESSION["payoff"]; ?></b> points</span><br/>
 <!--                        <span style="font-size: large;">You had a security event on day <b>--><?php //echo $_SESSION["outcomeday"]; ?><!--</b> in this period </span><br>-->
 <!--                        <span style="font-size: large;">You lost <b>--><?php //echo $_SESSION["outcomecost"]; ?><!--</b> points</span><br>-->
 <!--<!--                        <span style="font-size: large;">You have <b>-->-<?php ////echo $endowment; ?><!--<!--</b> points remaining</span><br>-->
                         <?php if($_SESSION["outcome2"]==1){ ?>
                             <span style="font-size: large;">You chose to update on <b>Day <?php echo $_SESSION["outcomeday2"]; ?></b> in this period.</span><br>
                         <?php } ?>
-                        <span style="font-size: large; color: red;">Unfortunately, you confronted a security failure in this period and you lost 100 points!! &#9785;</span><br/>
+                        <span style="font-size: large; color: red;">Unfortunately, you confronted a security failure in this period and you lost <?php echo $Exp_config['Loss']; ?> points!! &#9785;</span><br/>
 
                         <br/>
                         <input type="submit" name="submit" class="btn-style" value="Proceed" />
@@ -285,13 +288,14 @@ if($_SESSION["outcome"]==1 && $Day==10){
                     <br/>
                     <!-- <span style="font-size: large;">Your payoff for yesterday: <b><?php echo $Gamble; ?></b></span><br> -->
                     <span style="font-size: large;">You completed period <b><?php echo $period; ?></b></span><br>
-                    <span style="font-size: large;">TOTAL POINTS you have up to this point: <b><?php echo $endowment; ?></b> points</span><br/>
+<!--                    <span style="font-size: large;">TOTAL POINTS you have up to this point: <b>--><?php //echo $endowment; ?><!--</b> points</span><br/>-->
+                    <span style="font-size: large;">TOTAL POINTS you accumulated in this period: <b><?php echo $_SESSION["payoff"]; ?></b> points</span><br/>
 <!--                    <span style="font-size: large;">You had a security event on day <b>--><?php //echo $_SESSION["outcomeday"]; ?><!--</b> in this period </span><br>-->
 <!--                    <span style="font-size: large;">You lost <b>--><?php //echo $_SESSION["outcomecost"]; ?><!--</b> points </span><br>-->
                     <?php if($_SESSION["outcome2"]==1){ ?>
                         <span style="font-size: large;">You chose to update on <b>Day <?php echo $_SESSION["outcomeday2"]; ?></b> in this period.</span><br>
                     <?php } ?>
-                    <span style="font-size: large; color: red;">Unfortunately, you confronted a security failure in this period and you lost 100 points!! &#9785;</span><br/>
+                    <span style="font-size: large; color: red;">Unfortunately, you confronted a security failure in this period and you lost <?php echo $Exp_config['Loss']; ?> points!! &#9785;</span><br/>
 <!--                <span style="font-size: large;">You have <b>--><?php //echo $endowment; ?><!--</b> points remaining</span><br>-->
                     <br/>
                     <input type="submit" name="submit" class="btn-style" value="Proceed to the next period" />
@@ -332,7 +336,8 @@ if($_SESSION["outcome"]==1 && $Day==10){
                     <div style="border: dotted;">
                         <br/>
                         <span style="font-size: large;">You completed period <b><?php echo $period; ?></b></span><br/>
-                        <span style="font-size: large;">TOTAL POINTS you have up to this point: <b><?php echo $endowment; ?></b> points</span><br/>
+<!--                        <span style="font-size: large;">TOTAL POINTS you have up to this point: <b>--><?php //echo $endowment; ?><!--</b> points</span><br/>-->
+                        <span style="font-size: large;">TOTAL POINTS you accumulated in this period: <b><?php echo $_SESSION["payoff"]; ?></b> points</span><br/>
                         <?php if(!($period<4)){ ?>
                             <span style="font-size: large;">You did <b><u>not</u></b> update in this period.</span><br/>
                         <?php }?>
@@ -373,7 +378,8 @@ if($_SESSION["outcome"]==1 && $Day==10){
                     <div style="border: dotted;">
                         <br/>
                         <span style="font-size: large;">You completed period <b><?php echo $period; ?></b></span><br/>
-                        <span style="font-size: large;">TOTAL POINTS you have up to this point: <b><?php echo $endowment; ?></b> points</span><br/>
+<!--                        <span style="font-size: large;">TOTAL POINTS you have up to this point: <b>--><?php //echo $endowment; ?><!--</b> points</span><br/>-->
+                        <span style="font-size: large;">TOTAL POINTS you accumulated in this period: <b><?php echo $_SESSION["payoff"]; ?></b> points</span><br/>
                         <?php if(!($period<4)){ ?>
                             <span style="font-size: large;">You did <b><u>not</u></b> update in this period.</span><br/>
                         <?php }?>
