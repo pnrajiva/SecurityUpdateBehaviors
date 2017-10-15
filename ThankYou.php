@@ -65,6 +65,7 @@ $config = parse_ini_file('../Config.ini');
 
 // Create a new connection with the DB server details from config.ini
 $conn = new mysqli($config['server'],$config['username'],$config['password'],$config['dbname']);
+
 //$line = "";
 //$file = fopen("Config.txt","r");
 //$temp = 0;

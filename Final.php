@@ -21,27 +21,39 @@ $finalendow = $_GET["finalendow"];
 $endowdollar1 = $_GET["endowdollar1"];
 $total = $_GET["total"];
 $comment = $_GET["comment"];
-$line = "";
-$file = fopen("Config.txt","r");
-$temp = 0;
-while(! feof($file))
-{
-    if($temp==0){
-        $line = fgets($file);
 
-    }
-    $line = $line."+".fgets($file);
-    $temp = $temp + 1;
-}
-fclose($file);
+// Load Experiment configuration as an array.
+$Exp_config = parse_ini_file('ExperimentConfiguration.ini');
 
-$ID = $_SESSION["workerId"];
-$pieces = explode("+",$line);
-$servername = "localhost";
-$username = trim( $pieces[0]);
-$password = trim($pieces[1]);
-$dbname = trim($pieces[2]);
-$conn = new mysqli($servername, $username, $password, $dbname);
+
+//Establish a database connection
+// Load configuration as an array. Use the actual location of your configuration file
+$config = parse_ini_file('../Config.ini');
+
+// Create a new connection with the DB server details from config.ini
+$conn = new mysqli($config['server'],$config['username'],$config['password'],$config['dbname']);
+
+//$line = "";
+//$file = fopen("Config.txt","r");
+//$temp = 0;
+//while(! feof($file))
+//{
+//    if($temp==0){
+//        $line = fgets($file);
+//
+//    }
+//    $line = $line."+".fgets($file);
+//    $temp = $temp + 1;
+//}
+//fclose($file);
+//
+//$ID = $_SESSION["workerId"];
+//$pieces = explode("+",$line);
+//$servername = "localhost";
+//$username = trim( $pieces[0]);
+//$password = trim($pieces[1]);
+//$dbname = trim($pieces[2]);
+//$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
