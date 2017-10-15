@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="Style.css">
-    <script src="jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Style.css">
+    <script src="../jquery-3.1.0.min.js"></script>
 </head>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -101,7 +101,7 @@ $conn->close();
 
         </p>
         <div id="wrapperC" style="border-style: solid;">
-        <img src="images/Screenshot.png" alt="Experiment" style="width:600px;height:228px;"></div>
+        <img src="../images/Screenshot.png" alt="Experiment" style="width:600px;height:228px;"></div>
         <!-- <h2>Scenario</h2>
         <p>Imagine that you are using a computer software to make work-related choices on a daily basis. For the purpose of this task, you will choose between two options. Based on the option you choose each day, you will accumulate points.
         </p>
@@ -119,7 +119,7 @@ $conn->close();
 </div>
 <div id="Examples">
     <div id="wrapperC">
-    <form name="myForm" method="get" onsubmit="return onsubmitform();" action="StartTask.php">
+    <form name="myForm" method="get" onsubmit="return onsubmitform();" action="../StartTask.php">
         <h2 style="color: red;"><b>Important:</b> Please do <i>not</i> refresh the page or click "back" button during the experiment. Doing so will disqualify you from receiving a bonus payment.</h2>
         <h3>Click <b>Start</b> if you are ready to start. Good Luck!</h3>
         <input type="submit" name="submit" class="btn-style" value="Start">

@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="Style.css">
-    <script src="jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Style.css">
+    <script src="../jquery-3.1.0.min.js"></script>
 </head>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -96,7 +96,7 @@ $conn->close();
 
 <div id="Examples">
     <div id="wrapperC">
-    <form name="myForm" method="get" onsubmit="return onsubmitform();" action="StartTask.php">
+    <form name="myForm" method="get" onsubmit="return onsubmitform();" action="../StartTask.php">
         <h2>Please do <i>not</i> refresh the page or click "back" button during the experiment. Doing so will affect your bonus.</h2>
         <input type="submit" name="submit" class="btn-style" value="Submit">
         <br/><br/><br/>

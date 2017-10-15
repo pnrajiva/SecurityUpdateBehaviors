@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="Style.css">
-    <script src="jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Style.css">
+    <script src="../jquery-3.1.0.min.js"></script>
 
 </head>
 
