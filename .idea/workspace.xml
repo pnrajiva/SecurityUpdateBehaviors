@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44c2bddd-6fa4-4531-9ed8-096715b238c2" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/GI2.php" afterPath="$PROJECT_DIR$/Instructions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demographics.php" afterPath="$PROJECT_DIR$/Demographics.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StartTask.php" afterPath="$PROJECT_DIR$/StartTask.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,13 +14,15 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Demographics.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Demographics.php">
+      <file leaf-file-name="Task_parallel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Task_parallel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="89" column="96" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="96" />
+            <state relative-caret-position="134">
+              <caret line="49" column="60" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="60" />
               <folding>
-                <marker date="1508103559000" expanded="true" signature="2666:2744" ph="SELECT UserI... UpdateDemographics" />
+                <marker date="1508100544000" expanded="false" signature="7737:7756" ph="..." />
+                <marker date="1508100544000" expanded="false" signature="7885:7904" ph="..." />
+                <marker date="1508100544000" expanded="false" signature="8889:8902" ph="..." />
               </folding>
             </state>
           </provider>
@@ -38,12 +38,12 @@
       <list>
         <option value="$PROJECT_DIR$/GI2.php" />
         <option value="$PROJECT_DIR$/Demographics.php" />
-        <option value="$PROJECT_DIR$/StartTask.php" />
         <option value="$PROJECT_DIR$/Save_parallel.php" />
         <option value="$PROJECT_DIR$/Task_parallel.php" />
         <option value="$PROJECT_DIR$/ThankYou.php" />
         <option value="$PROJECT_DIR$/Final.php" />
         <option value="$PROJECT_DIR$/Old Versions/Period3Ins.html" />
+        <option value="$PROJECT_DIR$/StartTask.php" />
       </list>
     </option>
   </component>
@@ -207,12 +207,12 @@
       <workItem from="1507928000165" duration="556000" />
       <workItem from="1507928681161" duration="557000" />
       <workItem from="1507930573701" duration="49000" />
-      <workItem from="1508078002287" duration="7200000" />
+      <workItem from="1508078002287" duration="7449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8362000" />
+    <option name="totallyTimeSpent" value="8611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="714" extended-state="6" />
@@ -322,26 +322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Task_parallel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4814">
-          <caret line="371" column="17" lean-forward="true" selection-start-line="371" selection-start-column="17" selection-end-line="371" selection-end-column="17" />
-          <folding>
-            <marker date="1508100544000" expanded="false" signature="7737:7756" ph="..." />
-            <marker date="1508100544000" expanded="false" signature="7885:7904" ph="..." />
-            <marker date="1508100544000" expanded="false" signature="8889:8902" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StartTask.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Save_parallel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -402,6 +382,26 @@
           <caret line="89" column="96" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="96" />
           <folding>
             <marker date="1508103559000" expanded="true" signature="2666:2744" ph="SELECT UserI... UpdateDemographics" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StartTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="69" lean-forward="true" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_parallel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="49" column="60" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="60" />
+          <folding>
+            <marker date="1508100544000" expanded="false" signature="7737:7756" ph="..." />
+            <marker date="1508100544000" expanded="false" signature="7885:7904" ph="..." />
+            <marker date="1508100544000" expanded="false" signature="8889:8902" ph="..." />
           </folding>
         </state>
       </provider>

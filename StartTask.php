@@ -12,10 +12,12 @@
  * Time: 6:32 PM
  */
 session_start();
+// Load Experiment configuration as an array.
+$Exp_config = parse_ini_file('ExperimentConfiguration.ini');
 $_SESSION["outcome"]=0;
 $_SESSION["outcomeday"]=0;
 $_SESSION["outcomecost"]=0;
-$_SESSION["payoff"] = 0;
+$_SESSION["payoff"] = $Exp_config['InitialPayoff'];
 $_SESSION["DayPayoff"]=0;
 $_SESSION["outcome2"]=0;
 $_SESSION["outcomeday2"]=0;
