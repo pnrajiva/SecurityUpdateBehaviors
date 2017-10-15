@@ -55,7 +55,9 @@ $Decision = $_GET["Decision"];
 $Gamble = $_GET["Gamble"];
 //get the previous day
 $prevday = $Day - 1;
+
 $_SESSION["DayPayoff"]=$Gamble;
+
 //get the current endowment value
 if(($period==1) && ($Day==1)){ //if period 1 and day 1 set the endowment to 1000
     $endowment = $Exp_config['Endowment'];
@@ -115,7 +117,7 @@ if($num[0]==0) {
             $_SESSION["outcome"] = 1;
             $_SESSION["outcomeday"] = $Day;
             $_SESSION["outcomecost"] = $costofupdating;
-        } else if ($AttackLoss == 100) {
+        } else if ($AttackLoss == $Exp_config['Loss']) {
             $sql = "INSERT INTO DecisionSummary (UserID, ExpCondition, Period, Day, Decision, UpdateCost, CostIncurred, AttackLoss, CurEndowment, Gamble) VALUES ('$ID','$Condition','$period','$Day','$Decision','$UpdateCost','$costofupdating','$AttackLoss','$endowment','$Gamble');";
             $result1 = $conn->query($sql);
             $_SESSION["period"] = $period;
