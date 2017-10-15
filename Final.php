@@ -47,7 +47,7 @@ $conn = new mysqli($config['server'],$config['username'],$config['password'],$co
 //}
 //fclose($file);
 //
-//$ID = $_SESSION["workerId"];
+$ID = $_SESSION["workerId"];
 //$pieces = explode("+",$line);
 //$servername = "localhost";
 //$username = trim( $pieces[0]);
