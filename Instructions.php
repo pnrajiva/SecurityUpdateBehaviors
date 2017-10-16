@@ -23,6 +23,8 @@ $ID = $_SESSION["workerId"];
 //Get the Condition value
 $Condition = $_SESSION["Condition"];
 
+// Load Experiment configuration as an array.
+$Exp_config = parse_ini_file('ExperimentConfiguration.ini');
 //$line = "";
 //$file = fopen("Config.txt","r");
 //$temp = 0;
@@ -79,7 +81,7 @@ $conn->close();
         	<b><u>Your work consists of making investment decisions</u></b> over 20 work periods. Each work period consists of 10 days (see figure below). On each day, you must choose between safe Investment A, which provides you a guaranteed return of 2 points, and risky Investment B, which gives you 0 or 4 points. 
           <!--   <b><u>Your regular work is to make investment decisions</u></b>, choosing between an option (A) that provides you a safe return (2, measured in points) and a risky investment (B) that can give you 0 or 4 points. -->
         <br/><br/>
-        	During the course of your work, <b><u>a failure in the security of your business may randomly arise.</u></b> This failure is very costly to your business; every time you have a security failure, you lose 100 points. Your security team estimates the chance of a security failure on any given day is 3%.
+        	During the course of your work, <b><u>a failure in the security of your business may randomly arise.</u></b> This failure is very costly to your business; every time you have a security failure, you lose <?php echo $Exp_config['Loss']; ?> points. Your security team estimates the chance of a security failure on any given day is <?php echo $Exp_config['PAttack']*100; ?>%.
             <!-- <b><u>A security failure can be very costly to your business, resulting in a big loss.</u></b> Your security team estimates a 3% chance of security failures that would result in 100 points loss. -->
         </p>
 <!--        <p>-->
@@ -88,12 +90,14 @@ $conn->close();
         <p>
             <!-- At some point, updates to protect your work will be made available. The cost of an update is most often 10 points (85% of the time); but sometimes (15% of the time), an update may be available for free (0 points). <br/>
             If you choose to update, your chance of confronting a security failure reduces from 3% to 1%. -->
-            At some point during your work, <b><u>security updates to lower the risk of failure will be made available.</u></b> The cost of an update is most often (85% of the time) 10 points, but sometimes (15% of the time) an update will be available for free (0 points). <br/>
-            If you choose to update, your chance of confronting a security failure reduces from 3% to 1%.
+<!--            At some point during your work, -->
+            <b><u>Security updates to lower the risk of failure will be made available.</u></b> The cost of an update is <?php echo $Exp_config['HighUpdateCost']; ?> points, and <?php echo $Exp_config['PDiscount']*100; ?>% of the time an update will be available for <?php echo $Exp_config['LowUpdateCost']; ?> points. <br/>
+            If you choose to update, your chance of confronting a security failure reduces from <?php echo $Exp_config['PAttack']*100; ?>% to <?php echo $Exp_config['PAttackProtection']*100; ?>%.
         </p>
         <p>
             <!-- You will start this task with 100 points. You will go over 20 work periods, each period has 10 days (see figure below). In each day you will make one investment decision by clicking on one of two buttons:  A or B. You will get informed of the points received from your investment decision and you will see the total points accumulated within the period. You will be informed when an update is available and at what cost. -->
-            You will start this task with 100 points. As you make investment decisions each day (i.e., choosing between “A” and “B”), you will receive feedback on the points you earned from your decision and the total number of points accumulated within the period. You will be informed when a security update is available and at what cost.
+<!--            You will start this task with 100 points. -->
+            As you make investment decisions each day (i.e., choosing between “A” and “B”), you will receive feedback on the points you earned from your decision and the total number of points accumulated within the period. You will be informed when a security update is available and at what cost.
         </p>
 
         <p>
